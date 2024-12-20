@@ -9,7 +9,7 @@ def main():
 
 def get_book_text(path):
     with open(path) as f:
-    return f.read()
+        return f.read()
 
 def word_count(text):
     counter = 0
