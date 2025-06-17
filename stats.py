@@ -11,5 +11,9 @@ def num_characters(text):
     return characters_dict
 
 def sorted_num_of_chars(dict):
-    sorted_dict = {}
-    
+    list_of_dict = []
+    for character in dict:
+        number = dict[character]
+        list_of_dict.append(f"{'char': character, 'num': number}")
+    sorted_list = list_of_dict.sort(reverse=True, key=number)
+    return sorted_list
