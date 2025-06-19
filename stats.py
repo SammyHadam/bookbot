@@ -10,10 +10,13 @@ def num_characters(text):
             characters_dict[char] += 1
     return characters_dict
 
+def sort_on(dict):
+    return dict["num"]
+
 def sorted_num_of_chars(dict):
     list_of_dict = []
     for character in dict:
         number = dict[character]
-        list_of_dict.append(f"{'char': character, 'num': number}")
-    sorted_list = list_of_dict.sort(reverse=True, key=number)
-    return sorted_list
+        list_of_dict.append({'char': character, 'num': number})
+    list_of_dict.sort(reverse=True, key=sort_on)
+    return list_of_dict
